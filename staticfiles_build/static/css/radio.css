@@ -1,0 +1,32 @@
+#id_spam{
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+/* #id_spam > div > label>input{
+    display: none;
+} */
+
+#id_spam > div > label{
+    padding: 8px 14px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #ffffff;
+    background: #009578;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+#id_spam > div:not(:last-of-type){
+    border-right: 1px solid #006B56;
+}
+
+#id_spam > div > label:hover{
+    background: #006B56;
+}
+
+input[type="radio"]:checked ~ * #id_spam > div{
+    background: #006B56;
+}
