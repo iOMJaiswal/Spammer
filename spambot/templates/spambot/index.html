@@ -1,0 +1,34 @@
+{% extends 'spambot/basic.html' %}
+{% load static %}
+
+{% block title%} Welcome To Spammer | New way to fun {% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="{% static 'css/radio.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block indexActive %} active {% endblock %}
+
+
+{% block body %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <h4 class="">Enter Keywords Here </h4>
+    <textarea name="text" class="form-control my-3" style="height : 270px;" id="exampleFormControlTextarea1" rows="3"
+        placeholder="Eg :- Hello, Hiii, Spam, etc...."></textarea>
+    <div class="d-flex justify-content-center">
+        <div class="radio" role="toolbar" aria-label="Toolbar with button groups">
+            {% for el in form %}
+            {{el}}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto my-3">
+        <button onclick="showAlert()" type="submit" class="col btn btn-purple-moon ">Start Spam</button>
+
+    </div>
+</form>
+
+{% endblock %}

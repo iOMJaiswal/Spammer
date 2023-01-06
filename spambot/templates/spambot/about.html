@@ -1,0 +1,35 @@
+{% extends 'spambot/basic.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block title%} About Spammer and Me {% endblock %}
+
+
+{% block aboutActive %} active {% endblock %}
+
+
+{% block body %}
+
+<div class="d-flex h-100 text-center text-bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+
+        <main class="px-3 my-3">
+            <h1>Welcome To Spammer...</h1>
+            <p class="lead my-3">New way to fun. Irritate your Friends with Spammer by spamming into their accounts. Just type your Text, Select Number of Spam, Submit and open where to spam. And there you Go!!</p>
+            <p class="lead my-3">
+                <a href="{% url 'index' %}" class="btn btn-lg btn-secondary fw-bold  bg-primary">Try Spammer</a>
+            </p>
+        </main>
+
+
+    </div>
+
+
+
+
+
+</div>
+{% endblock %}
